@@ -5,5 +5,5 @@
 @endpush
 
 @section('main-section')
-    Dhruvin Prajapati
+    Daksh Shah
 @endsection
