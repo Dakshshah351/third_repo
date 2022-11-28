@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @push('title')
     <title>Welcome</title>
 @endpush
 
-@section('main-section')
+@section('content')
     Daksh Shah
 @endsection

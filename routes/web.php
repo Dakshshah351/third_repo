@@ -16,16 +16,16 @@ Route::put('register/{id}',[RegisterController::class,'update']);
 Auth::routes();
 Route::middleware(['auth', 'user-access:user'])->group(function () {
   
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
   
-    Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home');
 });
 Route::middleware(['auth', 'user-access:Faculty'])->group(function () {
   
-    Route::get('/Faculty/home', [HomeController::class, 'FacultyHome'])->name('Faculty.home');
+    Route::get('/Faculty/home', [App\Http\Controllers\HomeController::class, 'FacultyHome'])->name('Faculty.home');
 });
  
