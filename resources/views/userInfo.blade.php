@@ -1,10 +1,11 @@
-@extends('layouts.main')
+@extends('layouts.admin_layout')
+
 
 @push('title')
     <title>User Info</title>
 @endpush
 
-@section('main-section')
+@section('content')
     User Info<br>
     <form action="/user-info" method="POST">
         @csrf

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Project Management System') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -16,12 +16,12 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body style="background-color:lightblue">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'NDSNFN') }}
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
-                              
                             @endif
 
                             @if (Route::has('register'))
@@ -75,7 +74,25 @@
 
         <main class="py-4">
             @yield('content')
-        </main>
+            <div style="background-color:white"> <hr>
+<CENTER> <img src="{{ asset('img/campus.jpg')}}" width="600px"height="100px"></CENTER><HR></div>
+    <img src="{{ asset('img/campus3.jpg')}}" width="33%"height="400px"> 
+    <img src="{{ asset('img/campus1.jpg')}}" width="33%"height="400px"> 
+    <img src="{{ asset('img/campus2.jpg')}}" width="33%"height="400px">
+    <br>
+    <br>
+    <div style="background-color:white">
+    <hr>
+       
+<center><h1><u> About Us</u></h1></center> 
+<div><pre>
+<h4>    The Project By:
+            Thakkar Divy
+            Shah Daksh
+            Mistry Tirth</h4>
+</div>
+    </div>
+</main>
     </div>
 </body>
 </html>

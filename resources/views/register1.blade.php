@@ -1,12 +1,12 @@
-@extends('layouts.main')
+@extends('layouts.admin_layout')
 
 @push('title')
     <title>Register</title>
 @endpush
 
-@section('main-section')
-    Register<br>
-    <form action="/register" method="POST">
+@section('content')
+    Add Student<br>
+    <form action="/register1" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name" value="{{old('name')}}"><br>
         @error('name')
@@ -38,9 +38,9 @@
             <tr>
                 <td>{{$value->name}}</td>
                 <td>{{$value->email}}</td>
-                <td><a href="/register/{{$value->id}}/edit">Edit</a></td>
+                <td><a href="/register1/{{$value->id}}/edit">Edit</a></td>
                 <td>
-                    <form action="/register/{{$value->id}}" method="POST">
+                    <form action="/register1/{{$value->id}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete">

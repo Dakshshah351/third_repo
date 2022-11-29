@@ -8,11 +8,11 @@ Route::get('/', [BaseController::class, 'index']);
 Route::get('/about/{name}/{lname}', [BaseController::class, 'about']);
 Route::get('user-info',[BaseController::class, 'userInfo']);
 Route::post('user-info',[BaseController::class, 'userInfoCreate']);
-Route::get('register',[RegisterController::class, 'index']);
-Route::post('register',[RegisterController::class, 'store']);
-Route::delete('register/{id}',[RegisterController::class, 'destroy']);
-Route::get('register/{id}/edit',[RegisterController::class, 'edit']);
-Route::put('register/{id}',[RegisterController::class,'update']);
+Route::get('register1',[RegisterController::class, 'index']);
+Route::post('register1',[RegisterController::class, 'store']);
+Route::delete('register1/{id}',[RegisterController::class, 'destroy']);
+Route::get('register1/{id}/edit',[RegisterController::class, 'edit']);
+Route::put('register1/{id}',[RegisterController::class,'update']);
 Auth::routes();
 Route::middleware(['auth', 'user-access:user'])->group(function () {
   

@@ -1,9 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.index_layouts')
 
 @push('title')
     <title>Welcome</title>
 @endpush
 
-@section('content')
-    Daksh Shah
-@endsection
+@section('content')  >
+  @endsection
+{{-- -- ####################################################################################################### --> --}}
+  
+ 
+

@@ -11,7 +11,7 @@ class RegisterController extends Controller
     public function index()
     {
         $data = Register::all();
-        return view('register', compact('data'));
+        return view('register1', compact('data'));
     }
     public function store(Request $request)
     {
@@ -28,12 +28,12 @@ class RegisterController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
-        return redirect('/register');
+        return redirect('/register1');
     }
     public function destroy($id)
     {
         Register::where('id',$id)->delete();
-        return redirect('/register');
+        return redirect('/register1');
     }
     public function edit($id)
     {
@@ -46,7 +46,7 @@ class RegisterController extends Controller
             'name' => $request['name'],
             'email' => $request['email'],
         ]);
-        // Register::where('id',$id)->update($request->all());
-        return redirect('/register');
+        // Register::where('id',$id)->ugeeggeEEEpdate($request->all());
+        return redirect('/register1');
     }
 }
